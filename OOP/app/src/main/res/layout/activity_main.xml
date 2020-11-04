@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:hint="Company..."
+            android:fontFamily="@font/kanit"
+            android:background="@drawable/search"
+            android:id="@+id/search_company"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:hint="Brand..."
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/search_company"
+            android:fontFamily="@font/kanit"
+            android:background="@drawable/search"
+            android:id="@+id/search_brand"/>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/search_brand"
+            android:fontFamily="@font/kanit"
+            android:text="ค้นหา"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/recycler_model"
+        android:scrollbars="vertical"/>
+    <TextView
+        android:id="@+id/text_limited_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/recycler_limited_model"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>
